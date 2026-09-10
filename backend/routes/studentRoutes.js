@@ -1,11 +1,12 @@
 const express = require("express");
 
 const {
-    createStudent,
-    getAllStudents,
-    getStudentById,
-    updateStudent,
-    deleteStudent
+  createStudent,
+  getAllStudents,
+  getStudentById,
+  updateStudent,
+  deleteStudent,
+  getStudentStats,
 } = require("../controllers/studentController");
 
 const protect = require("../middleware/authMiddleware");
@@ -17,6 +18,9 @@ router.post("/", protect, createStudent);
 
 // Get all students
 router.get("/", protect, getAllStudents);
+
+// Statistics
+router.get("/stats", protect, getStudentStats);
 
 // Get single student
 router.get("/:id", protect, getStudentById);
