@@ -1,8 +1,259 @@
-#root {
-    width: 100%;
-    min-height: 100vh;
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
-.app {
-    min-height: 100vh;
+#root {
+  width: 100%;
+  min-height: 100vh;
+}
+
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  background: #f5f7fb;
+  color: #1f2937;
+}
+
+/* =========================
+   LOGIN PAGE
+========================= */
+
+.login-page {
+  min-height: 100vh;
+  display: flex;
+  background: #ffffff;
+}
+
+/* Left Side */
+
+.login-left {
+  width: 50%;
+  min-height: 100vh;
+  padding: 50px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  background: linear-gradient(135deg, #2563eb 0%, #1d4ed8 50%, #1e40af 100%);
+  color: white;
+}
+
+.brand {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.brand-icon {
+  width: 45px;
+  height: 45px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: rgba(255, 255, 255, 0.15);
+  border-radius: 12px;
+  font-size: 23px;
+}
+
+.brand h1 {
+  font-size: 26px;
+  letter-spacing: -1px;
+}
+
+.brand h1 span,
+.mobile-brand span {
+  font-weight: 400;
+}
+
+.welcome-content {
+  max-width: 520px;
+  margin: auto 0;
+}
+
+.welcome-content h2 {
+  font-size: 48px;
+  line-height: 1.15;
+  margin-bottom: 25px;
+  letter-spacing: -1.5px;
+}
+
+.welcome-content p {
+  max-width: 470px;
+  font-size: 17px;
+  line-height: 1.7;
+  color: rgba(255, 255, 255, 0.8);
+}
+
+.features {
+  margin-top: 35px;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.features div {
+  font-size: 15px;
+  color: rgba(255, 255, 255, 0.95);
+}
+
+/* Right Side */
+
+.login-right {
+  width: 50%;
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 30px;
+  background: #f8fafc;
+}
+
+.login-card {
+  width: 100%;
+  max-width: 430px;
+  padding: 40px;
+  background: white;
+  border-radius: 18px;
+  box-shadow: 0 15px 45px rgba(15, 23, 42, 0.08);
+}
+
+.login-card h2 {
+  font-size: 30px;
+  margin-bottom: 8px;
+  color: #111827;
+}
+
+.login-subtitle {
+  color: #6b7280;
+  font-size: 15px;
+  margin-bottom: 30px;
+}
+
+/* Mobile Brand */
+
+.mobile-brand {
+  display: none;
+}
+
+/* Input */
+
+.input-group {
+  margin-bottom: 20px;
+}
+
+.input-group label {
+  display: block;
+  margin-bottom: 8px;
+  font-size: 14px;
+  font-weight: 600;
+  color: #374151;
+}
+
+.input-group input {
+  width: 100%;
+  height: 48px;
+  padding: 0 15px;
+  border: 1px solid #d1d5db;
+  border-radius: 9px;
+  outline: none;
+  font-size: 14px;
+  background: #fff;
+  color: #000000;
+  transition: 0.2s;
+}
+
+.input-group input:focus {
+  border-color: #2563eb;
+  box-shadow: 0 0 0 3px rgba(37, 99, 235, 0.1);
+}
+
+.input-group input::placeholder {
+  color: #9ca3af;
+}
+
+/* Button */
+
+.login-button {
+  width: 100%;
+  height: 50px;
+  border: none;
+  border-radius: 9px;
+  background: #2563eb;
+  color: white;
+  font-size: 15px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: 0.2s;
+  margin-top: 8px;
+}
+
+.login-button:hover {
+  background: #1d4ed8;
+  transform: translateY(-1px);
+}
+
+.login-button:disabled {
+  opacity: 0.7;
+  cursor: not-allowed;
+  transform: none;
+}
+
+/* Error */
+
+.error-message {
+  padding: 12px 14px;
+  margin-bottom: 20px;
+  border-radius: 8px;
+  background: #fef2f2;
+  border: 1px solid #fecaca;
+  color: #dc2626;
+  font-size: 14px;
+}
+
+/* Footer */
+
+.login-footer {
+  text-align: center;
+  margin-top: 28px;
+  color: #9ca3af;
+  font-size: 12px;
+}
+
+/* =========================
+   RESPONSIVE
+========================= */
+
+@media (max-width: 900px) {
+  .login-left {
+    display: none;
+  }
+
+  .login-right {
+    width: 100%;
+  }
+
+  .mobile-brand {
+    display: block;
+    text-align: center;
+    color: #2563eb;
+    font-size: 23px;
+    font-weight: 700;
+    margin-bottom: 30px;
+  }
+}
+
+@media (max-width: 500px) {
+  .login-right {
+    padding: 20px;
+  }
+
+  .login-card {
+    padding: 28px 22px;
+    border-radius: 14px;
+    box-shadow: none;
+  }
+
+  .login-card h2 {
+    font-size: 25px;
+  }
 }
